@@ -3,9 +3,14 @@ Koke is an open-source programming language that enables deterministic replay.
 ## Design
 * Actor model
   * Cooperative Scheduling (Stackless Coroutine)
+  * M:N Scheduler
 * Effect Recording
+  * Must be clearly specified (System calls, time, and external inputs)
 * Record-Replay Layer
-  * Lamport Logical Clock
+  * Sequence record
+  * Thread-local buffer
+  * Encode Record to binary and Decode to Replay
+
 
 ## Research
 * [Efficient and Deterministic Record & Replay for Actor
